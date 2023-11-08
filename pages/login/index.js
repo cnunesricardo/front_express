@@ -20,7 +20,7 @@ const LoginPage = () => {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    console.log("VideoCarousel atualizou");
+    console.log("atualizou");
 }, [theme])
 
 

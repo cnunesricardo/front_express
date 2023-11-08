@@ -7,14 +7,12 @@ import React, {useContext, useEffect, useState} from 'react';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { fetchProducts } from 'src/app/utils/api.js'
-import { CartContext } from 'src/app/contexts/CartContext';
-import { ProductContainer, ProductImageProd, CardButton } from 'src/app/styles/ProductsStyles'
+import { ProductContainer, ProductImageProd, } from 'src/app/styles/ProductsStyles'
 import { ThemeContext } from "src/app/contexts/ThemeContext"
 import Link from 'next/link';
 
 const AdminEditProductsPage = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState();
-  const {addToCart} = useContext(CartContext);
 
   const handleMenuToggle  = () => {
     setIsDrawerOpen(!isDrawerOpen)
@@ -23,7 +21,7 @@ const AdminEditProductsPage = () => {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    console.log("VideoCarousel atualizou");
+    console.log("atualizou");
 }, [theme])
 
 
@@ -40,7 +38,7 @@ const AdminEditProductsPage = () => {
     getProducts();
   }, []);
 
- 
+  if (session) {
   return (
     <main className={`${theme === 'dark' ? 'bg-stone-600 text-white' : 'bg-white'} container mx-auto max-w-screen-lg min-h-screen`}>
       <Appbar onMenuToggle={handleMenuToggle}></Appbar>
@@ -93,9 +91,9 @@ const AdminEditProductsPage = () => {
                     </span>
                     <span className="container mx-auto flex justify-end items-end" >
                     
-                    <Link href={`/adm/${product.id}`}>
+                    <Link href={`/adm/editProduct/${product.id}`}>
                     <button className="bg-orange-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg">
-                    Select Product
+                    Edit Product
                     </button>
                     </Link>
                     </span>
@@ -107,6 +105,24 @@ const AdminEditProductsPage = () => {
       <Bottom></Bottom>
     </main>
   );
+}
+
+return (
+  <main className={`container mx-auto max-w-screen-lg min-h-screen ${theme === 'dark' ? 'bg-stone-600' : 'bg-white'}`}>
+    <Appbar onMenuToggle={handleMenuToggle}></Appbar>
+    <Drawer isOpen={isDrawerOpen} onClose={handleMenuToggle}></Drawer>
+    <div className="container mx-auto py-10 grid grid-cols-1 gap-4 place-items-center max-w-screen-sm">
+    <h1 className='text-xl font-semibold text-rose-400'> You are not currently logged in!</h1>
+    <button className="bg-orange-500 text-white border-none py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg"
+    onClick={() => signIn()}>
+    Sign in with Google
+    </button>       
+    </div>
+    <Bottom></Bottom>
+  </main>
+);
+
+
 
 }
 export default  AdminEditProductsPage;

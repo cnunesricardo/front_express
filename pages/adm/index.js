@@ -83,7 +83,7 @@ const AdminPage = () => {
               </button>
               </Link>
 
-        <Link href="/admin">
+        <Link href="/adm/productDelete">
               <button className="bg-orange-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg ">
               Delete Product
               </button>
