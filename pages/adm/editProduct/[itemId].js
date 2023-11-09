@@ -147,7 +147,7 @@ const handleEdit = async (event) => {
         <h1 className='container mx-auto pt-0 grid grid-cols-1 gap-2 place-items-center max-w-screen-lg text-2xl font-bold underline'>
          Update Information:</h1>
 
-         <form className="container mx-auto max-w-screen-lg flex justify-center grid grid-cols-1 gap-2 place-content-center" onSubmit={handleEdit}>
+         <form className="mb-5 container mx-auto max-w-screen-lg flex justify-center grid grid-cols-1 gap-2 place-content-center" onSubmit={handleEdit}>
             
             <div className="mt-0 container mx-auto max-w-screen-sm flex justify-center grid grid-cols-1 gap-1 place-content-center">
             <label for="title">Title:</label>

@@ -117,7 +117,7 @@ const handleDelete = async (event) => {
         </div>
 
         <h1 className='container mx-auto pt-7 grid grid-cols-1 gap-2 place-items-center max-w-screen-lg text-2xl font-bold underline'>
-         Product Id: {product.id} - Current Information</h1>
+         Product Id: {product.id}</h1>
 
 
               <ProductContainer className={`${theme === 'dark' ? 'bg-stone-600' : 'bg-white'} container mx-auto max-w-screen-sm flex felx-row`}>

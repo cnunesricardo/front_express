@@ -71,7 +71,7 @@ const AdminPage = () => {
 
         <p className='text-2xl mt-7 text-center font-bold'> Products </p>
         <div className="container mx-auto max-w-screen-lg flex justify-center flex-col items-center md:flex-row">
-        <Link href="/admin">
+        <Link href="/adm/productAdd">
               <button className="bg-orange-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-6 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg">
               Add Product
               </button>
@@ -94,17 +94,12 @@ const AdminPage = () => {
 
         <p className='text-2xl mt-7 text-center font-bold'> System Logs </p>
         <div className="container mx-auto max-w-screen-lg flex justify-center flex-row items-center">
-        <Link href="/admin">
+        <Link href="/adm/logsView">
               <button className="bg-orange-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg mb-20">
                 View
               </button>
               </Link>
-
-        <Link href="/admin">
-              <button className="bg-orange-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg mb-20">
-                Clean
-              </button>
-              </Link>
+        
         </div>
 
        

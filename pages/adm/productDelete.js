@@ -73,7 +73,7 @@ const AdminDeleteProductsPage = () => {
          Delete Product</h1>
 
 
-      <ul>
+      <ul className='mb-16'>
         {products.map((product) =>(
             <li key={product.id}>                
               <ProductContainer className={`${theme === 'dark' ? 'bg-stone-600' : 'bg-white'} container mx-auto max-w-screen-lg`}>

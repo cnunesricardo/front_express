@@ -131,7 +131,7 @@ const AdminCategoriesDeletePage = () => {
          <option key={option.id} value={option.id}>{option.name}</option>
         ))}
         </select>
-        <button className="mt-0 bg-rose-500 text-white border-none mt-2 ml-2 mr-2 py-2 px-6 rounded-lg shadow-md hover:bg-rose-600 hover:shadow-lg" type="submit">Delete</button>
+        <button className="mt-0 bg-red-600 text-white border-none mt-2 ml-2 mr-2 py-2 px-6 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg" type="submit">Delete</button>
         </form>
         </div>
 
